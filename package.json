@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DhanushAdithya/arrowverse-api/issues"
   },
-  "homepage": "https://github.com/DhanushAdithya/arrowverse-api#readme"
+  "homepage": "https://github.com/DhanushAdithya/arrowverse-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
