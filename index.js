@@ -28,6 +28,8 @@ app.get('/', (req, res) => {
 	})
 })
 
-app.listen(1953, () => {
-	console.log('Listening at port', 1953)
+const port = process.env.PORT || 1953
+
+app.listen(port, () => {
+	console.log('Listening at port', port)
 })
