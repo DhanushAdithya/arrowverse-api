@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 
 require('dotenv').config()
 
+const characters = require('./routes/characters')
+
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
@@ -22,11 +24,7 @@ app.use(morgan(':method :url :status :res[content-length]'))
 app.use(helmet())
 app.use(cors())
 
-app.get('/', (req, res) => {
-	res.send({
-		message: 'okay!',
-	})
-})
+app.use('/api/v1/characters', characters)
 
 const port = process.env.PORT || 1953
 
