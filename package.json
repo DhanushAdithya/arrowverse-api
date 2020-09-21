@@ -4,7 +4,14 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"prettify": "npx prettier --write .",
 		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run prettify",
+			"pre-push": "npm run prettify"
+		}
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +31,8 @@
 	},
 	"devDependencies": {
 		"dotenv": "^8.2.0",
+		"husky": "^4.3.0",
+		"jest": "^26.4.2",
 		"nodemon": "^2.0.4",
 		"prettier": "^2.1.2"
 	}
