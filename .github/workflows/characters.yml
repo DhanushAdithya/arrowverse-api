@@ -1,0 +1,22 @@
+name: Characters count Test
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Initiate Node actions
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - name: Install packages with `npm ci`
+      run: npm ci
+    
+    - name: Test characters count
+      run: npm test
