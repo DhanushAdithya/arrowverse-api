@@ -51,3 +51,5 @@ Promise.all(fromUrl.map(from => fetchNames(from)))
 	.then(result => Character.create(result))
 	.then(() => console.log(`Added ${totalEntries} characters`))
 	.catch(err => console.log(err))
+
+module.exports = fromUrl
