@@ -17,9 +17,6 @@ module.exports = async (req, res) => {
 	}
 
 	const { page = 1, limit = 10 } = req.query
-	const result = await Character.find().slice(
-		+page * +limit - +limit,
-		+page * +limit
-	)
-	res.json(result)
+	const result = await Character.find()
+	res.json(result.slice(+page * +limit - +limit, +page * +limit))
 }
