@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 require('dotenv').config()
 
-const Character = require('../../models/Character')
+const Character = require('../../..Character/models/Character')
 
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
