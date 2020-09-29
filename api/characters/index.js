@@ -2,8 +2,8 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const Character = require('../../models/Character')
-const { fetchNames } = require('../../../fetchers')
-const fromUrl = require('../../../scrapers/characterScraper')
+const { fetchNames } = require('../../fetchers')
+const fromUrl = require('../../scrapers/characterScraper')
 
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
