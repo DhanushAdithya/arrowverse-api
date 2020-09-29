@@ -17,4 +17,8 @@ module.exports = async (req, res) => {
 	}
 
 	const { id = '', page = 1, limit = 10, all = 'false', only = '' } = req.query
+	if (id === '' && all !== 'true' && only !== 'names') {
+		const result = await Character.find()
+		res.json(result.slice(+page * +limit - +limit, +page * +limit))
+	} else if (id !== '' && only !== 'names') {
 }
