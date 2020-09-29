@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const Character = require('../../models/Character')
+const { fetchNames } = require('../../../fetchers')
+const fromUrl = require('../../../scrapers/characterScraper')
 
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
@@ -17,6 +19,7 @@ module.exports = async (req, res) => {
 	}
 
 	const { id = '', page = 1, limit = 10, all = 'false', only = '' } = req.query
+
 	if (id === '' && all !== 'true' && only !== 'names') {
 		const result = await Character.find()
 		res.json(result.slice(+page * +limit - +limit, +page * +limit))
@@ -38,4 +41,8 @@ module.exports = async (req, res) => {
 				})
 			})
 	} else {
+		res.json({
+			error: 'Unknown Error',
+		})
+	}
 }
