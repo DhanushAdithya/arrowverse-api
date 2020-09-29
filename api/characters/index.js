@@ -16,7 +16,5 @@ module.exports = async (req, res) => {
 		return
 	}
 
-	const { id = '5f662f48e2601d3ba4126a37' } = req.query
-	const result = await Character.findById(id)
-	res.json(result)
+	const { id = '', page = 1, limit = 10, all = 'false', only = '' } = req.query
 }
