@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"prettify": "npx prettier --write .",
-		"build": "cd public && npm run build && cd ..",
+		"build": "cd public && npm i && npm run build && cd ..",
 		"test": "jest --detectOpenHandles --unhandled-rejections=strict"
 	},
 	"husky": {
