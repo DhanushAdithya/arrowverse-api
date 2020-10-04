@@ -1,4 +1,4 @@
-name: Characters count Test
+name: Deploy the Frontend to Vercel
 
 on: [push]
 
