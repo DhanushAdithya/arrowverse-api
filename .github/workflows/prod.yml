@@ -19,5 +19,8 @@ jobs:
     - name: Change directory to `./public`
       run: cd public
 
-    - name: Build process
-      run: npm run build
+    - name: pwd
+      run: pwd
+    
+    - name: ls
+      run: ls
