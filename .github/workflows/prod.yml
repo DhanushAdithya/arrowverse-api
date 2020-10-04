@@ -20,4 +20,4 @@ jobs:
       run: cd public && npm i
     
     - name: Build process
-      run: npm run build
+      run: cd public && npm run build
