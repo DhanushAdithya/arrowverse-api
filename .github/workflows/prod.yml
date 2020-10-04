@@ -17,7 +17,7 @@ jobs:
       run: cd public
 
     - name: Install packages with `npm i`
-      run: npm i
+      run: cd public && npm i
     
     - name: Build process
       run: npm run build
