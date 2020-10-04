@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
 		const result = await Character.find()
 		res.json(result)
 	} else if (only === 'names') {
-		Promise.all(fromUrl.map(from => fetchNames(from)))
+		Promise.all(fromUrl.map(from => fetchNames('Characters', from)))
 			.then(data => {
 				data = data.reduce((acc, val) => acc.concat(val), [])
 				return data

@@ -40,7 +40,7 @@ const fromUrl = [
 
 let totalEntries = 0
 
-Promise.all(fromUrl.map(from => fetchNames(from)))
+Promise.all(fromUrl.map(from => fetchNames('Characters', from)))
 	.then(data => {
 		data = data.reduce((arr, val) => arr.concat(val), [])
 		totalEntries = data.length

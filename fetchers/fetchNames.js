@@ -1,9 +1,9 @@
 const axios = require('axios')
 const { default: parse } = require('node-html-parser')
 
-const fetchNames = async param => {
+const fetchNames = async (category, param) => {
 	const response = await axios.get(
-		`https://arrow.fandom.com/wiki/Category:Characters?from=${param}`
+		`https://arrow.fandom.com/wiki/Category:${category}?from=${param}`
 	)
 	const html = parse(response.data)
 	const names = html
