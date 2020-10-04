@@ -13,14 +13,11 @@ jobs:
       with:
         node-version: 12
 
-    - name: Install packages with `npm i`
-      run: npm i
-    
     - name: Change directory to `./public`
       run: cd public
 
-    - name: pwd
-      run: pwd
+    - name: Install packages with `npm i`
+      run: npm i
     
-    - name: ls
-      run: ls
+    - name: Build process
+      run: npm run build
