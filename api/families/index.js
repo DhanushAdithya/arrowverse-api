@@ -2,15 +2,15 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 
 const Family = require('../../models/Family')
-// const { fetchNames } = require('../../fetchers')
-// const fromUrl = require('../../scrapers/characterScraper')
+const { fetchNames } = require('../../fetchers')
+const fromUrl = require('../../scrapers/characterScraper')
 
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true,
 })
 
-/* module.exports = async (req, res) => {
+module.exports = async (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*')
 	res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS')
 	if (req.method === 'OPTIONS') {
@@ -21,16 +21,16 @@ mongoose.connect(process.env.DB_URL, {
 	const { id = '', page = 1, limit = 10, all = 'false', only = '' } = req.query
 
 	if (id === '' && all !== 'true' && only !== 'names') {
-		const result = await Character.find()
+		const result = await Family.find()
 		res.json(result.slice(+page * +limit - +limit, +page * +limit))
 	} else if (id !== '' && only !== 'names') {
-		const result = await Character.findById(id)
+		const result = await Family.findById(id)
 		res.json(result)
 	} else if (all === 'true' && only !== 'names') {
-		const result = await Character.find()
+		const result = await Family.find()
 		res.json(result)
 	} else if (only === 'names') {
-		Promise.all(fromUrl.map(from => fetchNames('Characters', from)))
+		Promise.all(fromUrl.map(from => fetchNames('Families', from)))
 			.then(data => {
 				data = data.reduce((acc, val) => acc.concat(val), [])
 				return data
@@ -45,4 +45,4 @@ mongoose.connect(process.env.DB_URL, {
 			error: 'Unknown Error',
 		})
 	}
-} */
+}
