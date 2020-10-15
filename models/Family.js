@@ -7,8 +7,8 @@ const requiredString = {
 
 const familySchema = new mongoose.Schema({
 	name: requiredString,
-	species: String,
-	head: [String],
+	species: [String],
+	headOfTheFamily: [String],
 	home: mongoose.Schema.Types.Mixed,
 	goal: mongoose.Schema.Types.Mixed,
 	imgUrl: String,
