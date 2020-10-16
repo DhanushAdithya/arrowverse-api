@@ -36,3 +36,5 @@ Promise.all(fromUrl.map(from => fetchNames('Families', from)))
 	.then(result => Family.create(result))
 	.then(() => console.log(`Added ${totalEntries} families`))
 	.catch(err => console.log(err))
+
+module.exports = fromUrl
