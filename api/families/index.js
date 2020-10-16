@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const Family = require('../../models/Family')
 const { fetchNames } = require('../../fetchers')
-const fromUrl = require('../../scrapers/characterScraper')
+const fromUrl = require('../../scrapers/familyScraper')
 
 mongoose.connect(process.env.DB_URL, {
 	useNewUrlParser: true,
