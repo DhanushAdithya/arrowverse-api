@@ -5124,9 +5124,17 @@ type alias Process =
 			_List_Nil,
 			_List_fromArray([
 				A2(
-					$elm$html$Html$h1,
-					_List_fromArray([$elm$html$Html$Attributes$class('heading')]),
-					_List_fromArray([$elm$html$Html$text(model)])
+					$elm$html$Html$div,
+					_List_fromArray([$elm$html$Html$Attributes$class('header')]),
+					_List_fromArray([
+						A2(
+							$elm$html$Html$h1,
+							_List_fromArray([
+								$elm$html$Html$Attributes$class('heading'),
+							]),
+							_List_fromArray([$elm$html$Html$text(model)])
+						),
+					])
 				),
 			])
 		)

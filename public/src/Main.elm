@@ -33,5 +33,6 @@ update msg model =
 view : String -> Html String
 view model =
     div []
-        [ h1 [ class "heading" ] [ text model ]
+        [ div [ class "header" ]
+            [ h1 [ class "heading" ] [ text model ] ]
         ]
