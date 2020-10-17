@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"prettify": "npx prettier --write .",
-		"test": "jest --detectOpenHandles --unhandled-rejections=strict"
+		"test": "jest --detectOpenHandles --unhandled-rejections=strict",
+		"elm-start": "cd public && elm reactor",
+		"elm-build": "cd public && elm make src/Main.elm --output js/app.js"
 	},
 	"husky": {
 		"hooks": {
