@@ -3,6 +3,7 @@ module Main exposing (..)
 import Browser
 import Html exposing (Html, div, h1, text)
 import Html.Attributes exposing (class)
+import Sidebar exposing (sidebar)
 
 
 
@@ -35,4 +36,5 @@ view model =
     div []
         [ div [ class "header" ]
             [ h1 [ class "heading" ] [ text model ] ]
+        , sidebar
         ]
