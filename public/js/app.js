@@ -5118,6 +5118,17 @@ type alias Process =
 	var $elm$html$Html$h1 = _VirtualDom_node('h1')
 	var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text
 	var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text
+	var $author$project$Sidebar$sidebar = A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray([
+			A2(
+				$elm$html$Html$h1,
+				_List_Nil,
+				_List_fromArray([$elm$html$Html$text('Sidebar')])
+			),
+		])
+	)
 	var $author$project$Main$view = function (model) {
 		return A2(
 			$elm$html$Html$div,
@@ -5136,6 +5147,7 @@ type alias Process =
 						),
 					])
 				),
+				$author$project$Sidebar$sidebar,
 			])
 		)
 	}
