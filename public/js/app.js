@@ -5116,6 +5116,15 @@ type alias Process =
 	)
 	var $elm$html$Html$div = _VirtualDom_node('div')
 	var $elm$html$Html$h1 = _VirtualDom_node('h1')
+	var $elm$html$Html$a = _VirtualDom_node('a')
+	var $elm$html$Html$br = _VirtualDom_node('br')
+	var $elm$html$Html$Attributes$href = function (url) {
+		return A2(
+			$elm$html$Html$Attributes$stringProperty,
+			'href',
+			_VirtualDom_noJavaScriptUri(url)
+		)
+	}
 	var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text
 	var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text
 	var $author$project$Sidebar$sidebar = A2(
@@ -5125,7 +5134,32 @@ type alias Process =
 			A2(
 				$elm$html$Html$h1,
 				_List_Nil,
-				_List_fromArray([$elm$html$Html$text('Sidebar')])
+				_List_fromArray([$elm$html$Html$text('Routes')])
+			),
+			A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray([
+					A2(
+						$elm$html$Html$a,
+						_List_fromArray([
+							$elm$html$Html$Attributes$href(
+								'https://arrowverse-api.vercel.app/api/characters'
+							),
+						]),
+						_List_fromArray([$elm$html$Html$text('/characters')])
+					),
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					A2(
+						$elm$html$Html$a,
+						_List_fromArray([
+							$elm$html$Html$Attributes$href(
+								'https://arrowverse-api.vercel.app/api/families'
+							),
+						]),
+						_List_fromArray([$elm$html$Html$text('/families')])
+					),
+				])
 			),
 		])
 	)
