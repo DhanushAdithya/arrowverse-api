@@ -7,6 +7,7 @@
 
 body {
 	font-size: 16px;
+	overflow: hidden;
 }
 
 .header {
@@ -27,5 +28,42 @@ body {
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
 		'Lucida Sans', Arial, sans-serif;
 	font-size: 3em;
+}
+
+.sidebar {
+	width: 300px;
+	background-color: grey;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: calc(100vh - 150px);
+	margin-left: 20px;
+	position: relative;
+	top: -20px;
+	border-radius: 5px;
+}
+
+.sidebar h1 {
+	color: white;
+}
+
+.sidebar a {
+	text-decoration: none;
+	font-size: 24px;
+	color: grey;
+	display: inline-block;
+	background-color: lightgray;
+	margin: 10px 0;
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: bolder;
+	width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
