@@ -5129,7 +5129,7 @@ type alias Process =
 	var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text
 	var $author$project$Sidebar$sidebar = A2(
 		$elm$html$Html$div,
-		_List_Nil,
+		_List_fromArray([$elm$html$Html$Attributes$class('sidebar')]),
 		_List_fromArray([
 			A2(
 				$elm$html$Html$h1,
@@ -5138,7 +5138,7 @@ type alias Process =
 			),
 			A2(
 				$elm$html$Html$div,
-				_List_Nil,
+				_List_fromArray([$elm$html$Html$Attributes$class('route_cont')]),
 				_List_fromArray([
 					A2(
 						$elm$html$Html$a,

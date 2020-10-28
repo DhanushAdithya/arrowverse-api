@@ -10,9 +10,9 @@ import Html.Attributes exposing (class, href)
 
 sidebar : Html String
 sidebar =
-    div []
+    div [ class "sidebar" ]
         [ h1 [] [ text "Routes" ]
-        , div []
+        , div [ class "route_cont" ]
             [ a [ href "https://arrowverse-api.vercel.app/api/characters" ] [ text "/characters" ]
             , br [] []
             , a [ href "https://arrowverse-api.vercel.app/api/families" ] [ text "/families" ]
