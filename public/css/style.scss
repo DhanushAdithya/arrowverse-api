@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,200;1,400;1,600&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,6 +9,7 @@
 body {
 	font-size: 16px;
 	overflow: hidden;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -37,18 +40,26 @@ body {
 
 	h1 {
 		color: white;
+		width: 100%;
+		padding: 5px;
+		text-align: center;
+		border-bottom: 5px solid white;
 	}
 
-	a {
-		text-decoration: none;
-		font-size: 24px;
-		color: grey;
-		display: inline-block;
-		background-color: lightgray;
-		margin: 10px 0;
-		padding: 5px 10px;
-		border-radius: 5px;
-		font-weight: bolder;
-		width: 100%;
+	.route_cont {
+		a {
+			width: 100%;
+			margin-top: 10px;
+			padding: 5px 10px;
+			display: inline-block;
+			background-color: lightgray;
+			font-size: 24px;
+			color: grey;
+			text-decoration: none;
+			font-weight: 900;
+			font-variant: small-caps;
+			text-align: center;
+			border-radius: 5px;
+		}
 	}
 }
