@@ -3,7 +3,23 @@
 ## Endpoints
 ### `/api/characters`
 
+| Params | Default |
+| --- | --- |
+| `id` | `''` |
+| `page` | `1` |
+| `all` | `false` |
+| `only` | `''` |
+| `limit` | `10` |
+
 ### `/api/families`
+
+| Params | Default |
+| --- | --- |
+| `id` | `''` |
+| `page` | `1` |
+| `all` | `false` |
+| `only` | `''` |
+| `limit` | `10` |
 
 ## Characters
 ```js
